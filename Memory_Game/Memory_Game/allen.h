@@ -17,3 +17,13 @@ void printDirections()
 	writeLine("Or in this case, symbols, that hide to act like cards.\n");
 	writeLine("To begin, first enter the x and y values of the first and second cards.");
 }
+
+int generateAmountOfPairs(int length, int width)
+{
+	int numOfPairs = 0;
+	numOfPairs = length * width;
+	numOfPairs /= 2;
+
+	return numOfPairs;
+}
+

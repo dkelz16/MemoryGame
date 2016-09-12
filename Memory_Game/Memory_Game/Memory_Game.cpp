@@ -28,6 +28,8 @@ void memory()
 {
 	//VARIBALES TO BE USED
 	int numPairsFound = 0;
+	int boardLength = 0; //x
+	int boardWidth = 0; //y
 
 	printWelcomeMessage();
 	printDirections();
@@ -37,7 +39,8 @@ void memory()
 	// GETUSERINPUT
 	
 	//GENERATE PAIRS
-	
+	generateAmountOfPairs(boardLength, boardWidth);
+
 	//DO THE STORING
 
 	//PRINTING
