@@ -2,7 +2,7 @@
 //
 
 #include "stdafx.h"
-#include "allen.h" //My useful library
+#include "allenMethodLibrary.h" //My useful library
 #include <string>
 #include <iostream>
 #include <ctime>
