@@ -24,6 +24,21 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="allenMethodLibrary.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="allen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="derek.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dave.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="jared.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

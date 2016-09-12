@@ -145,6 +145,11 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="allenMethodLibrary.h" />
+    <ClInclude Include="allen.h" />
+    <ClInclude Include="dave.h" />
+    <ClInclude Include="derek.h" />
+    <ClInclude Include="jared.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
