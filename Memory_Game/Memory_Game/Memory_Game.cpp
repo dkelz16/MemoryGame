@@ -22,8 +22,15 @@ void printWelcomeMessage()
 	cout << "Welcome To MemoryGame v 1.0 . . .\n";
 }
 
+void memory()
+{
+	printWelcomeMessage();
+	printDirections();
+}
+
 int main()
 {
+	memory();
     return 0;
 }
 
