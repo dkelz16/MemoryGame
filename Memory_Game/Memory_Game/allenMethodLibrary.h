@@ -112,7 +112,7 @@ char toUpper(char value)
 	return value;
 }
 
-int inputFirstOne(void) { //Use this for a getChar()
+int allenGetChar(void) { //Use this for a getChar()
 	int ch;
 
 	ch = getchar();

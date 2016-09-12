@@ -17,6 +17,8 @@
 
 using namespace std;
 
+//2D ARRAYS HERE
+
 void printWelcomeMessage()
 {
 	cout << "Welcome To MemoryGame v 1.0 . . .\n";
@@ -24,8 +26,29 @@ void printWelcomeMessage()
 
 void memory()
 {
+	//VARIBALES TO BE USED
+	int numPairsFound = 0;
+
 	printWelcomeMessage();
 	printDirections();
+
+	//LOOP THIS BITCH??
+
+	// GETUSERINPUT
+	
+	//GENERATE PAIRS
+	
+	//DO THE STORING
+
+	//PRINTING
+
+	//GET USER SPOT GUESSES
+
+	//CHECK BOARD
+
+	//numPairsFound++;
+
+	//PRINT GOODBYE
 }
 
 int main()
