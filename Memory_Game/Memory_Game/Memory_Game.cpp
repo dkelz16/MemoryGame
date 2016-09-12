@@ -3,6 +3,13 @@
 
 #include "stdafx.h"
 #include "allenMethodLibrary.h" //My useful library
+
+//OUR METHOD HEADERS
+#include "allen.h"
+#include "dave.h"
+#include "derek.h"
+#include "jared.h"
+
 #include <string>
 #include <iostream>
 #include <ctime>
