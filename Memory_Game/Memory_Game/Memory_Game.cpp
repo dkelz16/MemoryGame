@@ -10,6 +10,11 @@
 
 using namespace std;
 
+void printWelcomeMessage()
+{
+	cout << "Welcome To MemoryGame v 1.0 . . .\n";
+}
+
 int main()
 {
     return 0;
