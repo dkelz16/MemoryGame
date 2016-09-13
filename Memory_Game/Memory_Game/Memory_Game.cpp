@@ -82,34 +82,51 @@ void displayNumberedBoard(int columns, int rows) //DISPLAYS THE BOARD WITH NUMBE
 	cout << "\n\n";
 }
 
+void printGoodbyeMessage()
+{
+	cout << "\nThank You For Playing Memory, Have A Great Day . . .\n\n";
+}
+
 void memory()
 {
 	//VARIABLES TO BE USED
 	int numPairsFound = 0;
 	int boardLength = 0; //x
 	int boardWidth = 0; //y
-
+	int playAgain = 0;
+	
+	bool keepPlaying = true; //IF USER WANTS TO PLAY AGAIN
+	bool boardComplete = false; //IF USER HAS GUESSED ALL THE SPOTS CORRECTLY
+	
+	
 	printWelcomeMessage();
 	printDirections();
 
-	//LOOP THIS BITCH??
+	while((keepPlaying == true) && (boardComplete == false))
+	{
+		//LOOP THIS BITCH??
 
-	// GETUSERINPUT
+		// GETUSERINPUT
+			
+		//GENERATE PAIRS
+		generateAmountOfPairs(boardLength, boardWidth);
+		
+		//DO THE STORING
+		
+		//PRINTING
+		
+		//GET USER SPOT GUESSES
+		
+		//CHECK BOARD	
+		
+		//numPairsFound++;
+		
+		cin >> playAgain; //GETS INPUT AS TO WHETHER USER WANTS TO PLAY AGAIN OR NOT
+		//TODO: ADD ERROR CHECKING
+	}
+
+	printGoodbyeMessage();
 	
-	//GENERATE PAIRS
-	generateAmountOfPairs(boardLength, boardWidth);
-
-	//DO THE STORING
-
-	//PRINTING
-
-	//GET USER SPOT GUESSES
-
-	//CHECK BOARD
-
-	//numPairsFound++;
-
-	//PRINT GOODBYE
 }
 
 int main()
