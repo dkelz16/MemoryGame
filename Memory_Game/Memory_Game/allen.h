@@ -7,8 +7,11 @@
 
 #include <string>
 #include <iostream>
+#include <vector>
+#include <array>
 
 using namespace std;
+
 
 void printDirections()
 {
@@ -18,12 +21,25 @@ void printDirections()
 	writeLine("To begin, first enter the x and y values of the first and second cards.");
 }
 
-int generateAmountOfPairs(int length, int width)
+void createBoard(int amountPairs)
+{
+
+}
+
+void generateAmountOfPairs(int length, int width)
 {
 	int numOfPairs = 0;
+	int count = 0;
 	numOfPairs = length * width;
 	numOfPairs /= 2;
 
-	return numOfPairs;
+	write("Amount of pairs: ");
+	writeLine(numOfPairs);
+
+	 //94 max
+
+	createBoard(numOfPairs);
+
+
 }
 
