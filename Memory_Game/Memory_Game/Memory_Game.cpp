@@ -102,10 +102,8 @@ void memory()
 	printWelcomeMessage();
 	printDirections();
 
-	while((keepPlaying == true) && (boardComplete == false))
+	while((keepPlaying == true) && (boardComplete == false)) //LOOPS AS LONG AS USER WANTS TO PLAY OR BOARD IS COMPLETE
 	{
-		//LOOP THIS BITCH??
-
 		// GETUSERINPUT
 			
 		//GENERATE PAIRS
@@ -121,11 +119,35 @@ void memory()
 		
 		//numPairsFound++;
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		// < - - - DECIDES WHETHER PLAYER WANTS TO RESTART GAME - - - > //
+		cout << "Would You Like To Play Again? Enter 1 for Yes. Otherwise, Enter 2 For No . . .";
 		cin >> playAgain; //GETS INPUT AS TO WHETHER USER WANTS TO PLAY AGAIN OR NOT
-		//TODO: ADD ERROR CHECKING
+		while ((playAgain != 1) && (playAgain != 2)) //ERROR CHECKING FOR USER INPUT
+		{
+			cout << "Try again";
+			cin >> let;
+		}
 	}
 
-	printGoodbyeMessage();
+	printGoodbyeMessage(); //ENDS GAME
 	
 }
 
