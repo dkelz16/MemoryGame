@@ -24,6 +24,16 @@ void printWelcomeMessage() //PRINTS WELCOME MESSAGE
 	cout << "Welcome To MemoryGame v 1.0 . . .\n";
 }
 
+void createBlankArray()
+{
+
+}
+
+void createFullArray()
+{
+
+}
+
 void displayNumberedBoard(int columns, int rows) //DISPLAYS THE BOARD WITH NUMBERS (UP TO 100)
 {
 	int count = 1;
@@ -105,7 +115,8 @@ void memory()
 	while((keepPlaying == true) && (boardComplete == false)) //LOOPS AS LONG AS USER WANTS TO PLAY OR BOARD IS COMPLETE
 	{
 		// GETUSERINPUT
-			
+		getBoardLength(boardLength);
+		getBoardWidth(boardWidth);
 		//GENERATE PAIRS
 		generateAmountOfPairs(boardLength, boardWidth);
 		
