@@ -126,6 +126,8 @@ void memory()
 		
 		//GET USER SPOT GUESSES
 		
+		//IF USER SPOT GUESSES ARE A MATCH, INCREMENT A COUNTER ... 
+		
 		//CHECK BOARD	
 		
 		//numPairsFound++;
