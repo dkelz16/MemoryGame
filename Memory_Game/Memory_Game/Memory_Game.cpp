@@ -43,6 +43,8 @@ void memory()
 	int playAgain = 0;
 	bool startingNewGame = true;
 
+	int* boardSizes;
+
 	bool keepPlaying = true; //IF USER WANTS TO PLAY AGAIN
 	bool boardComplete = false; //IF USER HAS GUESSED ALL THE SPOTS CORRECTLY
 
@@ -60,10 +62,12 @@ void memory()
 			numPairs = getNumPairs();
 
 			//GENERATE PAIRS
-			generateAmountOfPairs(numPairs);
+			boardSizes = generateAmountOfPairs(numPairs);
+			boardLength = boardSizes[0];
+			boardWidth = boardSizes[1];
 
 			//PRINTS NUMBERED BOARD
-			displayNumberedBoard();
+			displayNumberedBoard(boardLength, boardWidth);
 
 			startingNewGame = false; //GAME STARTED
 		}

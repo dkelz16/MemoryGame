@@ -25,12 +25,9 @@ void instatainiateDaveArrays()
 	}
 }
 
-void displayNumberedBoard()
+void displayNumberedBoard(int rows, int columns)
 {
 	int count = 1;
-
-	int rows = 4;
-	int columns = 4;
 
 	for (int i = 0; i < columns; i++)
 	{

@@ -179,7 +179,7 @@ void convertToSingleArray(int leg, int wid)
 	}
 }
 
-void generateAmountOfPairs(int numOfPairs)
+int* generateAmountOfPairs(int numOfPairs)
 {
 	chars = B;
 
@@ -188,11 +188,16 @@ void generateAmountOfPairs(int numOfPairs)
 	int count = 0;
 	int spotCount = 0;
 
+	int boardSize[2] = { 0,0 };
+
 	spotCount = numOfPairs * 2;
 
 	//FIGURE BEST AMOUNT BASED ON AMOUNT OF PAIRS
 	length = figureLength(spotCount);
 	width = spotCount / length;
+
+	boardSize[0] = length;
+	boardSize[1] = width;
 
 	write("There are ");
 	write(numOfPairs);
@@ -203,5 +208,7 @@ void generateAmountOfPairs(int numOfPairs)
 	generatePairs(length, width, spotCount);
 
 	convertToSingleArray(length, width);
+
+	return boardSize;
 }
 
