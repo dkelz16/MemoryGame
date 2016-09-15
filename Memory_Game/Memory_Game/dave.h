@@ -9,8 +9,8 @@
 
 using namespace std;
 
-bool A[100]; //DECLARES MAX POSSIBLE BOOLEAN ARRAY
-char B[100]; //DECLARES MAX CHAR ARRAY
+bool A[100];
+char B[100];
 
 void instatainiateDaveArrays()
 {
@@ -61,9 +61,9 @@ void displayNumberedBoard()
 							cout << "|    " << count << "    ";
 							count++;
 						}
-
+						
 					}
-					else if ((count > 9) && (count < 100))
+					else if((count > 9) && (count < 100))
 					{
 						if (A[count] == true)
 						{
@@ -75,7 +75,7 @@ void displayNumberedBoard()
 							cout << "|   " << count << "    ";
 							count++;
 						}
-
+						
 					}
 					else
 					{
@@ -89,21 +89,21 @@ void displayNumberedBoard()
 							cout << "|  " << count << "    ";
 							count++;
 						}
-
+						
 					}
-
+					
 				}
 				else
 				{
 					cout << "|         ";
 				}
-
+				
 			}
-
-			cout << "|\n";
-		}
+			
+			cout << "|\n";	
+		}	
 	}
-
+	
 	for (int p = 0; p < rows; p++)
 	{
 		cout << "|- - - - -";
