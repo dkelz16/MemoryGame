@@ -108,7 +108,7 @@ char toUpper(char value)
 	{
 		value = (char)((int)value - 32);
 	}
-	
+
 	return value;
 }
 
@@ -119,4 +119,9 @@ int allenGetChar(void) { //Use this for a getChar()
 	while ('\n' != getchar());
 
 	return ch;
+}
+
+int getRandomNumber(int max)
+{
+	return rand() % max;
 }
