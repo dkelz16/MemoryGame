@@ -55,10 +55,23 @@ void memory()
 	bool keepPlaying = true; //IF USER WANTS TO PLAY AGAIN
 	bool boardComplete = false; //IF USER HAS GUESSED ALL THE SPOTS CORRECTLY
 	
+	bool A[100]; //DECLARES MAX POSSIBLE BOOLEAN ARRAY
+	char B[100]; //DECLARES MAX CHAR ARRAY
+	
+	
+	for (int j = 0; j < 100; j++) //SETS ALL POSSIBLE SPOTS TO FALSE FOR BOOLEAN ARRAY
+	{
+		A[j] = false;
+	}
+	
+	for (int s = 0; s < 100; s++) //SETS ALL POSSIBLE SPOTS TO '$' FOR CHAR ARRAY
+	{
+		B[s] = '$';
+	}
 	
 	printWelcomeMessage();
 	printDirections();
-
+	
 	while((keepPlaying == true) && (boardComplete == false)) //LOOPS AS LONG AS USER WANTS TO PLAY OR BOARD IS COMPLETE
 	{
 		// GETUSERINPUT
