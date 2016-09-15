@@ -9,10 +9,13 @@
 
 using namespace std;
 
-void displayNumberedBoard(int columns, int rows) //DISPLAYS THE BOARD WITH NUMBERS (UP TO 100)
+void displayNumberedBoard(bool A[], char B[] )
 {
 	int count = 1;
-	
+
+	int rows = 4;
+	int columns = 4;
+
 	for (int i = 0; i < columns; i++)
 	{
 		cout << "|";
@@ -32,18 +35,45 @@ void displayNumberedBoard(int columns, int rows) //DISPLAYS THE BOARD WITH NUMBE
 				{
 					if (count <= 9)
 					{
-						cout << "|    " << count << "    ";
-						count++;
+						if (A[count] == true)
+						{
+							cout << "|    " << B[count] << "    ";
+							count++;
+						}
+						else
+						{
+							cout << "|    " << count << "    ";
+							count++;
+						}
+						
 					}
 					else if((count > 9) && (count < 100))
 					{
-						cout << "|   " << count << "    ";
-						count++;
+						if (A[count] == true)
+						{
+							cout << "|    " << B[count] << "    ";
+							count++;
+						}
+						else
+						{
+							cout << "|   " << count << "    ";
+							count++;
+						}
+						
 					}
 					else
 					{
-						cout << "|  " << count << "    ";
-						count++;
+						if (A[count] == true)
+						{
+							cout << "|   " << B[count] << "    ";
+							count++;
+						}
+						else
+						{
+							cout << "|  " << count << "    ";
+							count++;
+						}
+						
 					}
 					
 				}
@@ -66,3 +96,4 @@ void displayNumberedBoard(int columns, int rows) //DISPLAYS THE BOARD WITH NUMBE
 	cout << "|";
 	cout << "\n\n";
 }
+
