@@ -41,9 +41,9 @@ void memory()
 	int userSpotA = 0;
 	int userSpotB = 0;
 	int playAgain = 0;
+	int rows;
+	int columns;
 	bool startingNewGame = true;
-
-	int* boardSizes;
 
 	bool keepPlaying = true; //IF USER WANTS TO PLAY AGAIN
 	bool boardComplete = false; //IF USER HAS GUESSED ALL THE SPOTS CORRECTLY
@@ -51,7 +51,7 @@ void memory()
 	instatainiateDaveArrays();
 
 	printWelcomeMessage();
-	printDirections();
+	//printDirections();
 
 	while ((keepPlaying == true) && (boardComplete == false)) //LOOPS AS LONG AS USER WANTS TO PLAY OR BOARD IS COMPLETE
 	{
@@ -60,22 +60,21 @@ void memory()
 			// GETUSERINPUT
 			//TODO: JARED, CHANGE THIS TO YOUR METHOD NAME 
 			numPairs = getNumPairs();
-
+			rows = numPairs / 2;
+			columns = numPairs / 2;
 			//GENERATE PAIRS
-			boardSizes = generateAmountOfPairs(numPairs);
-			boardLength = boardSizes[0];
-			boardWidth = boardSizes[1];
+			generateAmountOfPairs(numPairs,2);
 
 			//PRINTS NUMBERED BOARD
-			displayNumberedBoard(boardLength, boardWidth);
+			displayNumberedBoard(A, B, rows, columns);
 
 			startingNewGame = false; //GAME STARTED
 		}
 		else //GAME IS RUNNING 
 		{
 			//GET USER SPOT GUESSES
-			userSpotA = getXCoordinate(); //IDEA...
-			userSpotB = getYCoordinate(); //IDEA...
+			//userSpotA = getInt(); //IDEA...
+			//userSpotB = getInt(); //IDEA...
 
 			//GET COORDS FOR BOTH
 
