@@ -112,4 +112,3 @@ void displayNumberedBoard()
 	cout << "|";
 	cout << "\n\n";
 }
-
