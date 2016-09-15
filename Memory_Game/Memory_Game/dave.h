@@ -9,10 +9,29 @@
 
 using namespace std;
 
-void displayNumberedBoard(int columns, int rows) //DISPLAYS THE BOARD WITH NUMBERS (UP TO 100)
+bool A[100]; //DECLARES MAX POSSIBLE BOOLEAN ARRAY
+char B[100]; //DECLARES MAX CHAR ARRAY
+
+void instatainiateDaveArrays()
+{
+	for (int j = 0; j < 100; j++) //SETS ALL POSSIBLE SPOTS TO FALSE FOR BOOLEAN ARRAY
+	{
+		A[j] = false;
+	}
+
+	for (int s = 0; s < 100; s++) //SETS ALL POSSIBLE SPOTS TO '$' FOR CHAR ARRAY
+	{
+		B[s] = '$';
+	}
+}
+
+void displayNumberedBoard()
 {
 	int count = 1;
-	
+
+	int rows = 4;
+	int columns = 4;
+
 	for (int i = 0; i < columns; i++)
 	{
 		cout << "|";
@@ -32,32 +51,59 @@ void displayNumberedBoard(int columns, int rows) //DISPLAYS THE BOARD WITH NUMBE
 				{
 					if (count <= 9)
 					{
-						cout << "|    " << count << "    ";
-						count++;
+						if (A[count] == true)
+						{
+							cout << "|    " << B[count] << "    ";
+							count++;
+						}
+						else
+						{
+							cout << "|    " << count << "    ";
+							count++;
+						}
+
 					}
-					else if((count > 9) && (count < 100))
+					else if ((count > 9) && (count < 100))
 					{
-						cout << "|   " << count << "    ";
-						count++;
+						if (A[count] == true)
+						{
+							cout << "|    " << B[count] << "    ";
+							count++;
+						}
+						else
+						{
+							cout << "|   " << count << "    ";
+							count++;
+						}
+
 					}
 					else
 					{
-						cout << "|  " << count << "    ";
-						count++;
+						if (A[count] == true)
+						{
+							cout << "|   " << B[count] << "    ";
+							count++;
+						}
+						else
+						{
+							cout << "|  " << count << "    ";
+							count++;
+						}
+
 					}
-					
+
 				}
 				else
 				{
 					cout << "|         ";
 				}
-				
+
 			}
-			
-			cout << "|\n";	
-		}	
+
+			cout << "|\n";
+		}
 	}
-	
+
 	for (int p = 0; p < rows; p++)
 	{
 		cout << "|- - - - -";
