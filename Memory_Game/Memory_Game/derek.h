@@ -7,8 +7,6 @@
 
 #include <string>
 #include <iostream>
-#include <ctime>
-#include <cstdlib>
 
 using namespace std;
 static void createBlankArray()
@@ -19,4 +17,18 @@ static void createBlankArray()
 static void createFullArray()
 {
 
+}
+static int getXCoordinate()
+{
+	int value;
+	cout << "Please select an X coordinate:";
+	cin >> value;
+	return value;
+}
+static int getYCoordinate()
+{
+	int value;
+	cout << "Please select a Y coordinate:";
+	cin >> value;
+	return value;
 }
