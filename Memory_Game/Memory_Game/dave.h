@@ -9,7 +9,23 @@
 
 using namespace std;
 
-void displayNumberedBoard(bool A[], char B[] )
+bool A[100];
+char B[100];
+
+void instatainiateDaveArrays()
+{
+	for (int j = 0; j < 100; j++) //SETS ALL POSSIBLE SPOTS TO FALSE FOR BOOLEAN ARRAY
+	{
+		A[j] = false;
+	}
+
+	for (int s = 0; s < 100; s++) //SETS ALL POSSIBLE SPOTS TO '$' FOR CHAR ARRAY
+	{
+		B[s] = '$';
+	}
+}
+
+void displayNumberedBoard()
 {
 	int count = 1;
 
