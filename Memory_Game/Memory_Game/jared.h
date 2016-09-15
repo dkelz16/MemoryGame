@@ -5,7 +5,7 @@
 
 using namespace std;
 
-int amountOfPairs()
+int getNumPairs()
 {
   int pairs = 0;
 
