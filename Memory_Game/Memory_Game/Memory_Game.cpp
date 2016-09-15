@@ -121,6 +121,7 @@ void memory()
 		
 		if(playAgain == 1)
 		{
+			cout << "\nStarting New Game . . .\n";
 			startingNewGame = true;
 		}
 		else
