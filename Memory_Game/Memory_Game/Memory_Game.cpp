@@ -78,12 +78,8 @@ void memory()
 		//TODO: JARED, CHANGE THIS TO YOUR METHOD NAME 
 		numPairs = getNumPairs();
 		
-		//USE THIS FOR NOW, CAN THINKK OF SOMETHING BETTER
-		boardLength = numpairs / 2;
-		boardWidth = numpairs / 2;
-		
 		//GENERATE PAIRS
-		generateAmountOfPairs(boardLength, boardWidth);
+		generateAmountOfPairs(numPairs);
 		
 		//GET USER SPOT GUESSES
 		userSpotA = getInt(); //IDEA...
