@@ -51,6 +51,7 @@ void memory()
 	int userSpotA = 0;
 	int userSpotB = 0;
 	int playAgain = 0;
+	bool startingNewGame = true;
 	
 	bool keepPlaying = true; //IF USER WANTS TO PLAY AGAIN
 	bool boardComplete = false; //IF USER HAS GUESSED ALL THE SPOTS CORRECTLY
@@ -74,38 +75,35 @@ void memory()
 	
 	while((keepPlaying == true) && (boardComplete == false)) //LOOPS AS LONG AS USER WANTS TO PLAY OR BOARD IS COMPLETE
 	{
-		// GETUSERINPUT
-		//TODO: JARED, CHANGE THIS TO YOUR METHOD NAME 
-		numPairs = getNumPairs();
+		if(startingNewGame == true) //HAPPENS ONLY IF A NEW GAME STARTS
+		{
+			// GETUSERINPUT
+			//TODO: JARED, CHANGE THIS TO YOUR METHOD NAME 
+			numPairs = getNumPairs();
 		
-		//GENERATE PAIRS
-		generateAmountOfPairs(numPairs);
+			//GENERATE PAIRS
+			generateAmountOfPairs(numPairs);
+			
+			//PRINTS NUMBERED BOARD
+			printNumberedBoard(A, B);
+			
+			startingNewGame = false; //GAME STARTED
+		}
+		else //GAME IS RUNNING 
+		{
+			//GET USER SPOT GUESSES
+			userSpotA = getInt(); //IDEA...
+			userSpotB = getInt(); //IDEA...
+			
+			//GET COORDS FOR BOTH
+			
+			//IF USER SPOT GUESSES ARE A MATCH, INCREMENT A COUNTER ... 
+			
+			
+			//CHECK BOARD	
 		
-		//GET USER SPOT GUESSES
-		userSpotA = getInt(); //IDEA...
-		userSpotB = getInt(); //IDEA...
-		
-		//GET COORDS FOR BOTH
-		
-		//IF USER SPOT GUESSES ARE A MATCH, INCREMENT A COUNTER ... 
-		
-		
-		//CHECK BOARD	
-		
-		//numPairsFound++;
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+			//numPairsFound++;	
+		}
 		
 		
 		
@@ -118,11 +116,21 @@ void memory()
 		while ((playAgain != 1) && (playAgain != 2)) //ERROR CHECKING FOR USER INPUT
 		{
 			cout << "Try again";
-			cin >> let;
+			cin >> playAgain;
+		}
+		
+		if(playAgain == 1)
+		{
+			startingNewGame = true;
+		}
+		else
+		{
+			keepPlaying = false;
+			printGoodbyeMessage(); //ENDS GAME
 		}
 	}
 
-	printGoodbyeMessage(); //ENDS GAME
+	
 	
 }
 
