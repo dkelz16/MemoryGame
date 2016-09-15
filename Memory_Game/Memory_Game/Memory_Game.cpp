@@ -47,6 +47,9 @@ void memory()
 	int numPairsFound = 0;
 	int boardLength = 0; //x
 	int boardWidth = 0; //y
+	int numPairs = 0;
+	int userSpotA = 0;
+	int userSpotB = 0;
 	int playAgain = 0;
 	
 	bool keepPlaying = true; //IF USER WANTS TO PLAY AGAIN
@@ -59,18 +62,24 @@ void memory()
 	while((keepPlaying == true) && (boardComplete == false)) //LOOPS AS LONG AS USER WANTS TO PLAY OR BOARD IS COMPLETE
 	{
 		// GETUSERINPUT
-		getBoardLength(boardLength);
-		getBoardWidth(boardWidth);
+		//TODO: JARED, CHANGE THIS TO YOUR METHOD NAME 
+		numPairs = getNumPairs();
+		
+		//USE THIS FOR NOW, CAN THINKK OF SOMETHING BETTER
+		boardLength = numpairs / 2;
+		boardWidth = numpairs / 2;
+		
 		//GENERATE PAIRS
 		generateAmountOfPairs(boardLength, boardWidth);
 		
-		//DO THE STORING
-		
-		//PRINTING
-		
 		//GET USER SPOT GUESSES
+		userSpotA = getInt(); //IDEA...
+		userSpotB = getInt(); //IDEA...
+		
+		//GET COORDS FOR BOTH
 		
 		//IF USER SPOT GUESSES ARE A MATCH, INCREMENT A COUNTER ... 
+		
 		
 		//CHECK BOARD	
 		
