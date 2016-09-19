@@ -35,14 +35,13 @@ void memory()
 {
 	//VARIABLES TO BE USED
 	int numPairsFound = 0;
-	int boardLength = 0; //x
-	int boardWidth = 0; //y
 	int numPairs = 0;
 	int userSpotA = 0;
 	int userSpotB = 0;
 	int playAgain = 0;
 	int rows;
 	int columns;
+	int* boardSize;
 	bool startingNewGame = true;
 
 	bool keepPlaying = true; //IF USER WANTS TO PLAY AGAIN
@@ -60,13 +59,15 @@ void memory()
 			// GETUSERINPUT
 			//TODO: JARED, CHANGE THIS TO YOUR METHOD NAME 
 			numPairs = getNumPairs();
-			rows = numPairs / 2;
-			columns = numPairs / 2;
+
 			//GENERATE PAIRS
-			generateAmountOfPairs(numPairs,2);
+			boardSize = generateAmountOfPairs(numPairs);
+			rows = boardSize[0];
+			columns = boardSize[1];
+
 
 			//PRINTS NUMBERED BOARD
-			displayNumberedBoard(A, B, rows, columns);
+			displayNumberedBoard(rows, columns);
 
 			startingNewGame = false; //GAME STARTED
 		}

@@ -19,3 +19,16 @@ int getNumPairs()
 	cout << pairs << endl;
 	return pairs;
 }
+
+void checkForMatch(char b[], bool a[], int guess1, int guess2)
+{
+	if (b[guess1] == b[guess2])
+	{
+
+	}
+}
+
+/*
+A[guess1] = true;
+		A[guess2] = true;
+*/
