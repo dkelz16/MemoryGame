@@ -18,17 +18,10 @@ static void createFullArray()
 {
 
 }
-static int getXCoordinate()
+static int getCoordinate()
 {
 	int value;
-	cout << "Please select an X coordinate:";
-	cin >> value;
-	return value;
-}
-static int getYCoordinate()
-{
-	int value;
-	cout << "Please select a Y coordinate:";
+	cout << "Please enter the spot number: ";
 	cin >> value;
 	return value;
 }

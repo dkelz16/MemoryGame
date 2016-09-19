@@ -18,10 +18,9 @@ char* chars;
 
 void printDirections()
 {
-	writeLine("Hello and welcome to the game of Memory!");
+	writeLine("");
 	writeLine("The object of the game is to match pairs of cards face down.");
 	writeLine("Or in this case, symbols, that hide to act like cards.\n");
-	writeLine("To begin, first enter the x and y values of the first and second cards.");
 }
 
 int* findEmptySpot(int x, int y)
@@ -165,7 +164,7 @@ int figureLength(int spots)
 
 void convertToSingleArray(int leg, int wid)
 {
-	int counter = 0;
+	int counter = 1;
 	char spot = ' ';
 
 	for (int i = 0; i < leg; i++)
@@ -201,7 +200,7 @@ int* generateAmountOfPairs(int numOfPairs)
 
 	write("There are ");
 	write(numOfPairs);
-	writeLine(" pairs. Good luck!");
+	writeLine(" pairs. Good luck!\n");
 
 	initializeBoard(length, width);
 
